@@ -11,6 +11,14 @@ from enum import IntEnum, auto
 from pyzbar.pyzbar import decode
 from PIL import Image
 
+YELLOW  = [  0, 213, 255]
+BLUE    = [186,  81,   0]
+GREEN   = [ 96, 158,   0]
+ORANGE  = [  0,  88, 255]
+RED     = [ 58,  30, 196]
+WHITE   = [255, 255, 255]
+colors  = [YELLOW, BLUE, GREEN, ORANGE, RED, WHITE]
+
 def contains_color(img, bgr):
     rows, cols, _ = img.shape
     for i in range(rows):
@@ -238,14 +246,6 @@ def qubic_rube(dir, code):
             sys.exit(0)
 
 if __name__ == '__main__':
-    YELLOW  = [  0, 213, 255]
-    BLUE    = [186,  81,   0]
-    GREEN   = [ 96, 158,   0]
-    ORANGE  = [  0,  88, 255]
-    RED     = [ 58,  30, 196]
-    WHITE   = [255, 255, 255]
-    colors  = [YELLOW, BLUE, GREEN, ORANGE, RED, WHITE]
-
     next_code = "01000000000000000000" # 1
     #next_code = "30468d9272ca9219655a" # 30
     #next_code = "3142aec6cd75d8596295" # 31
